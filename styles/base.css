@@ -17,8 +17,6 @@ body {
 /*title*/
 header {
     background-color: #08456d;
-
-
 }
 
 header h1 {
@@ -152,6 +150,7 @@ footer {
     color: #ffffff;
 }
 
+/* Javascript*/
 #lastModified {
     color: #fffb00;
     font-size: 11px;
