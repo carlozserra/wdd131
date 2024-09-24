@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    font-family: "Patua One", serif;
+}
+
+
+/*title*/
+header {
+    background-color: #08456d;
+
+
+}
+
+header h1 {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+header h5 {
+    color: #fffb00e2;
+    margin-right: 100px;
+    margin-top: -45px;
+    font-size: 20px;
+    display: flex;
+    justify-content: end;
+    text-align: center;
+}
+
+/* navigation bar*/
+nav {
+    background-color: #f7fff7;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #2b2e2f;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav a:hover {
+    color: #fffb00;
+}
+
+
+/* Layout using CSS Grid */
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
+    padding: 30px;
+
+}
+
+
+/*First Section*/
+.card {
+    background-color: #ffff;
+    border-radius: 8px;
+    border: 1px solid #6d6d6d;
+}
+
+.card p {
+
+    margin: 23px;
+}
+
+.imgProfile {
+    display: flex;
+    float: inline-end;
+    width: auto;
+    height: 150px;
+    margin: 20px 20px 20px 20px;
+    border: 1px solid;
+
+}
+
+h3 {
+    color: #08456d;
+    margin-top: 90px;
+    margin-left: 240px;
+    
+}
+
+hr {
+    margin: 0 140px 10px;
+    align-items: center;
+    border: 1px solid #00000028;
+    width: 300px;
+}
+
+.imgBrazil {
+    display: flex;
+    float: inline-start;
+    width: auto;
+    height: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 1px solid;
+}
+
+h5 {
+    text-align: start;
+    color: #08456d;
+    margin-left: 65px;
+}
+
+/*Second Section*/
+.card2 {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #6d6d6d;
+}
+
+.card2 a {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+    background-color: #08456d;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1px;
+    background-color: #08456d;
+    color: #ffffff;
+}
+
+#lastModified {
+    color: #fffb00;
+    font-size: 11px;
+}
