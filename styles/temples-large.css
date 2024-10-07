@@ -26,7 +26,7 @@ body {
 }
 
 .navigation a:hover {
-    color: #f4dc08;
+    color: #ffe600;
 }
 
 header {
@@ -34,7 +34,7 @@ header {
     height: 10vh;
     display: flex;
     justify-content: space-evenly;
-    background-color: #2aa55b;
+    background-color: #254130;
     margin-bottom: 20px;
 }
 
@@ -77,7 +77,7 @@ div {
 footer {
     display: flex;
     justify-content: center;
-    background-color: #2aa55b;
+    background-color: #254130;
     color: white;
     padding: 10px;
 }
