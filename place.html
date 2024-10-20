@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazil</title>
+    <meta name="description" content="Carlos Henrique Serra">
+    <meta name="author" content="Carlos Serra">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Brazil</h1>
+    </header>
+
+    <main>
+
+        <picture>
+            <source media="(min-width: 801px)" srcset="/images/arara-large.webp">
+            <source media="(min-width: 401px)" srcset="images/arara-medium.webp">
+            <img src="images/arara.webp" alt="Kenya Image" class="main-image" aria-label="national animal of Kenya">
+        </picture>
+        <section class="data">
+            <h2>Data</h2>
+            <p><span class="label">Area:</span> 8.510.000 km²</p>
+            <p><span class="label">Population:</span> 211,998,573 </p>
+            <p><span class="label">Capital:</span> Brasília</p>
+            <p><span class="label">Languages:</span> Português brasileiro</p>
+            <p><span class="label">Currency:</span> Real</p>
+            <p><span class="label">Time Zone:</span> UTC-3</p>
+            <p><span class="label">Calling Code:</span> +55</p>
+            <p><span class="label">Internet TLD:</span> .br</p>
+        </section>
+
+        <section class="weather">
+            <h2 class="weather-title">Weather <span class="weather-icon"><img src="/images/clouds.svg"
+            alt="Weather Icon" aria-label="Weather Icon"></span></h2>
+            <p><span class="label">Temperature:</span> 26°C</p>
+            <p><span class="label">Conditions:</span> Cloudy</p>
+            <p><span class="label">Wind:</span> 13 km/h</p>
+            <p><span class="label">Wind Chill:</span> <span id="windChill"></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentYear"></span> Carlos Serra - Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

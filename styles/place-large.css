@@ -1,0 +1,54 @@
+@media (min-width: 900px) {
+    body {
+        max-width: 80vw;
+        margin: 0 auto;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        position: relative;
+        background-image: url('images/arara-large.webp');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .data,
+    .weather {
+        position: absolute;
+        width: 300px;
+        padding: 20px;
+        background-color: rgba(249, 249, 249, 0.9);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .data h2,
+    .weather h2 {
+        color: white;
+        background-color: var(--third);
+        margin-left: -40px;
+        text-align: left;
+        padding-left: 2rem;
+    }
+
+    .weather-icon {
+        display: none;
+    }
+
+    .data {
+        top: 20px;
+        left: 20px;
+    }
+
+    .weather {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .weather-title::after {
+        display: inline;
+        content: "⛅";
+    }
+
+}
