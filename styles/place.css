@@ -7,8 +7,10 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
 }
+
 
 header {
     background: var(--primary);
@@ -51,12 +53,13 @@ picture {
 
 .weather-title {
     position: relative;
-   
+
 }
 
 .weather-title::after {
-    display: none;  
+    display: none;
 }
+
 /*FOOTER*/
 
 footer {
@@ -69,5 +72,4 @@ footer {
 
 #lastModified {
     color: #f4dc08
-
 }
