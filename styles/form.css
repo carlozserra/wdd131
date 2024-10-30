@@ -62,7 +62,7 @@ label {
 #installation-date{
     width: 100vh;
 }
-.raiting-form {
+.rating-form {
     display: flex;
     justify-content: center;
     gap: 10px;
