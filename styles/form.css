@@ -1,0 +1,119 @@
+:root {
+    --primary-color: #254130;
+    --secondary-color: #ffe600;
+    --form-color: #6f8f7d99;
+    --border-radius: 0.5rem;
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    --border-color: 1px solid hsl(0, 0%, 85%);
+   
+}
+
+
+body {
+    display: grid;
+    font-family: "PT-Sans", sans-serif;
+    font-size: 14px;
+}
+
+header,
+footer {
+    text-align: center;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+header {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+
+/*===== FORM CONTAINER*/
+form {
+    background-color: var(--form-color);
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: var(--border-color)
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Espaço entre checkbox e label */
+    margin-bottom: 5px;
+    /* Espaçamento entre as linhas */
+}
+
+label {
+    display: block;
+}
+/*============= SPECIFIC CLASSES*/
+#installation-date{
+    width: 100vh;
+}
+.raiting-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: var(--border-radius);
+    border: var(--border-color);
+}
+select,
+input {
+    cursor: pointer;
+}
+
+textarea {
+    height: 10rem;
+}
+
+
+/*=============== SUBMIT BUTTON*/
+input[type="submit"] {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    border: none;
+}
+
+
+/*========= FOOTER*/
+
+footer {
+    margin-top: 0.5rem;
+
+}
+
+footer p {
+    color: #fff;
+    display: block;
+    margin: 0;
+}
+
+/* Javascript*/
+#lastModified {
+    color: var(--secondary-color);
+}

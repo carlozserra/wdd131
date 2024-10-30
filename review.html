@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="description" content="Carlos Henrique Serra">
+    <meta name="author" content="Carlos Serra">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Thank you for Submitting !!</h1>
+    </header>
+
+    <div id="reviewCount"><b>Total Reviews:</b> 0</div>
+
+    <script>
+        // Função para obter parâmetros da URL
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            const results = regex.exec(window.location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        window.addEventListener('load', function () {
+            const newReview = getUrlParameter('newReview');
+
+            if (newReview === 'true') {
+                let reviewCount = parseInt(localStorage.getItem('reviewCount')) || 0; // Garante que seja um número
+                reviewCount++;
+                localStorage.setItem('reviewCount', reviewCount);
+            }
+
+            let currentCount = localStorage.getItem('reviewCount') || 0;
+            document.getElementById('reviewCount').innerHTML = `<b>Total Reviews:</b> ${currentCount}`;
+
+            const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            window.history.replaceState({ path: newUrl }, '', newUrl);
+        });
+
+        //================================== LAST MODIFIED
+        //======YEAR
+        document.querySelector("#currentYear");
+        const today = new Date();
+        currentYear.innerHTML = `<span class="currentYear">
+        ${today.getFullYear()} </span>`;
+        //==========DATA AND TIME
+        document.querySelector("#lastModified").innerHTML = `<span class="lastModified">
+        Last Modification: ${document.lastModified}</span>`;
+    </script>
+
+    <footer><p>&copy;<span id="currentYear"></span>💲 Carlos Serra 💲 Brazil | <span id="lastModified"></span></p></footer>
+</body>
+
+</html>
