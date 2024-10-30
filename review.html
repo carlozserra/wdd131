@@ -21,7 +21,17 @@
     <div id="reviewCount"><b>Total Reviews:</b> 0</div>
 
     <script>
-        // Função para obter parâmetros da URL
+
+        //================================== LAST MODIFIED
+        //======YEAR
+        document.querySelector("#currentYear");
+        const today = new Date();
+        currentYear.innerHTML = `<span class="currentYear">
+        ${today.getFullYear()} </span>`;
+        //==========DATA AND TIME
+        document.querySelector("#lastModified").innerHTML = `<span class="lastModified">
+        Last Modification: ${document.lastModified}</span>`;
+
         function getUrlParameter(name) {
             name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
             const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -45,15 +55,7 @@
             window.history.replaceState({ path: newUrl }, '', newUrl);
         });
 
-        //================================== LAST MODIFIED
-        //======YEAR
-        document.querySelector("#currentYear");
-        const today = new Date();
-        currentYear.innerHTML = `<span class="currentYear">
-        ${today.getFullYear()} </span>`;
-        //==========DATA AND TIME
-        document.querySelector("#lastModified").innerHTML = `<span class="lastModified">
-        Last Modification: ${document.lastModified}</span>`;
+        
     </script>
 
     <footer><p>&copy;<span id="currentYear"></span>💲 Carlos Serra 💲 Brazil | <span id="lastModified"></span></p></footer>
