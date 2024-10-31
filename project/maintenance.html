@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carlos Henrique Serra">
+    <meta name="author" content="Carlos Serra">
+    <link rel="stylesheet" href="styles/final-project.css">
+    <script src="scripts/final-project.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+        <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #ffff00;
+            --background-color: #000000;
+            --text-color: #ffffff;
+            --font-family: Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            max-width: 1000px;
+            margin: 0 auto;
+            border: solid 1px var(--primary-color);
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .options {
+            margin-bottom: 20px;
+        }
+
+        .options label {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .options select, .options button {
+            padding: 8px;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+
+        .parts-list {
+            margin-bottom: 20px;
+        }
+
+        .parts-list li {
+            list-style-type: none;
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+
+        .total-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bike Maintenance</h1>
+    </header>
+
+    <div class="container">
+        <h2>Choose your bike parts for a trail bike upgrade</h2>
+
+        <!-- Options to add parts -->
+        <div class="options">
+            <label for="parts">Select part to add:</label>
+            <select id="parts">
+                <option value="chain" data-price="25">Chain - $25</option>
+                <option value="brakes" data-price="40">Brakes - $40</option>
+                <option value="cassette" data-price="30">Cassette - $30</option>
+                <option value="crankset" data-price="50">Crankset - $50</option>
+                <option value="suspension" data-price="120">Suspension - $120</option>
+                <option value="pedals" data-price="20">Pedals - $20</option>
+            </select>
+            <button onclick="addPart()">Add Part</button>
+        </div>
+
+        <!-- List of selected parts -->
+        <ul id="selected-parts" class="parts-list"></ul>
+
+        <!-- Total Price -->
+        <div class="total-price">
+            Total Cost: $<span id="total-cost">0</span>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy;<span id="currentYear"></span>💲 Carlos Serra 💲 Brazil | <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+            //====================================================================== MAINTENANCE
+        // Array to store selected parts
+        let selectedParts = [];
+
+        // Function to add part to the list
+            function addPart() {
+           const partSelect = document.getElementById('parts');
+           const selectedPart = partSelect.options[partSelect.selectedIndex];
+           const partName = selectedPart.text;
+           const partPrice = parseFloat(selectedPart.getAttribute('data-price'));
+
+           // Add the part to the array
+           selectedParts.push({ name: partName, price: partPrice });
+
+           // Update the UI
+           updatePartsList();
+           updateTotalCost();}       
+
+            // Function to remove a part from the list
+            function removePart(index) {
+           selectedParts.splice(index, 1);
+           updatePartsList();
+           updateTotalCost();}       
+
+            //Update the parts list in the UI
+            function updatePartsList() {
+            const partsList = document.getElementById('selected-parts');
+            partsList.innerHTML = ''; // Clear the list
+
+           selectedParts.forEach((part, index) => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `${part.name} - $${part.price.toFixed(2)} <button onclick="removePart(${index})">Remove</button>`;
+            partsList.appendChild(listItem);
+           });}       
+            // Update the total cost in the UI
+            function updateTotalCost() {
+            const totalCostElement = document.getElementById('total-cost');
+            const totalCost = selectedParts.reduce((sum, part) => sum + part.price, 0);
+            totalCostElement.textContent = totalCost.toFixed(2);}
+
+            //======================================================================================== TIME and DATA
+            document.querySelector("#currentYear");
+            const today = new Date();
+            currentYear.innerHTML = `<span class="currentYear">
+            ${today.getFullYear()} </span>`;
+            
+            document.querySelector("#lastModified").innerHTML = `<span class="lastModified">
+            Last Modification: ${document.lastModified}</span>`;
+    </script>
+
+</body>
+</html>

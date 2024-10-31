@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trails</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carlos Henrique Serra">
+    <meta name="author" content="Carlos Serra">
+    <link rel="stylesheet" href="styles/final-project.css">
+    <script src="scripts/final-project.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #ffff00;
+            --background-color: #000000;
+            --text-color: #ffffff;
+            --font-family: Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            max-width: 1000px;
+            margin: 0 auto;
+            border: solid 1px var(--primary-color);
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .trail-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .trail {
+            background-color: var(--primary-color);
+            padding: 20px;
+            border-radius: 10px;
+            color: var(--secondary-color);
+        }
+
+        .trail h3 {
+            margin: 0 0 10px 0;
+        }
+
+        .trail p {
+            margin: 5px 0;
+        }
+
+        .trail button {
+            padding: 8px 12px;
+            font-size: 1rem;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .trail button:hover {
+            background-color: #ffcc00;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Trail Rides</h1>
+    </header>
+
+    <div class="container">
+        <h2>Explore Our Exciting Trails</h2>
+
+        <div class="trail-list">
+
+            <div class="trail">
+                <h3>Mountain Peak Trail</h3>
+                <p>Distance: 20 km</p>
+                <p>Location: Colorado, USA</p>
+                <p>Cost: $50</p>
+                <button onclick="scheduleRide('Mountain Peak Trail')">Schedule</button>
+            </div>
+
+            <div class="trail">
+                <h3>River Valley Path</h3>
+                <p>Distance: 15 km</p>
+                <p>Location: Oregon, USA</p>
+                <p>Cost: $40</p>
+                <button onclick="scheduleRide('River Valley Path')">Schedule</button>
+            </div>
+
+            <div class="trail">
+                <h3>Forest Hills Adventure</h3>
+                <p>Distance: 25 km</p>
+                <p>Location: British Columbia, Canada</p>
+                <p>Cost: $60</p>
+                <button onclick="scheduleRide('Forest Hills Adventure')">Schedule</button>
+            </div>
+
+            <div class="trail">
+                <h3>Desert Dunes Challenge</h3>
+                <p>Distance: 30 km</p>
+                <p>Location: Arizona, USA</p>
+                <p>Cost: $70</p>
+                <button onclick="scheduleRide('Desert Dunes Challenge')">Schedule</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy;<span id="currentYear"></span>💲 Carlos Serra 💲 Brazil | <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>
