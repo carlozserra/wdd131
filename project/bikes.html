@@ -1,54 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!DOCTYPE html>
     <html lang="en-US">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bikes</title>
+        <title>Pedal Bike</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Carlos Henrique Serra">
         <meta name="author" content="Carlos Serra">
-        <link rel="stylesheet" href="styles/roof-pedal-pages.css">
-        <script src="scripts/final-project.js" defer></script>
-  
-<body>
-    <header>
-        <h1>Bikes for Sale</h1>
-    </header>
-    <div class="bike-container">
-        <div class="bike">
-            <img src="https://images.unsplash.com/photo-1605605518074-65a43e89ae3c?auto=format&fit=crop&w=700&q=80" alt="Bike 1">
-            <h3>Mountain Bike Pro</h3>
-            <p>High-quality mountain bike for tough trails.</p>
-            <p class="price">$800</p>
-            <button class="buy-btn">Buy Now</button>
-        </div>
-        <div class="bike">
-            <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?auto=format&fit=crop&w=700&q=80" alt="Bike 2">
-            <h3>Road Bike Pro</h3>
-            <p>Lightweight road bike for speed enthusiasts.</p>
-            <p class="price">$1200</p>
-            <button class="buy-btn">Buy Now</button>
-        </div>
-        <div class="bike">
-            <img src="https://images.unsplash.com/photo-1504975488419-43f92f16a75b?auto=format&fit=crop&w=700&q=80" alt="Bike 3">
-            <h3>Hybrid City Bike</h3>
-            <p>Perfect hybrid for city and light off-road trails.</p>
-            <p class="price">$950</p>
-            <button class="buy-btn">Buy Now</button>
-        </div>
-        <div class="bike">
-            <img src="https://images.unsplash.com/photo-1535968880471-0e14d2eabfa2?auto=format&fit=crop&w=700&q=80" alt="Bike 4">
-            <h3>Electric Commuter Bike</h3>
-            <p>Eco-friendly electric bike for daily commutes.</p>
-            <p class="price">$1500</p>
-            <button class="buy-btn">Buy Now</button>
-        </div>
-    </div>
+        <link rel="stylesheet" href="styles/final-project.css">
 
-    <footer>
-        <p>&copy;<span id="currentYear"></span>💲 Carlos Serra 💲 Brazil | <span id="lastModified"></span></p>
-    </footer>
-</body>
-</html>
+        
+        <style>
+            body {
+                font-family: var(--font-family);
+                margin: 0;
+                padding: 0;
+                background-color: var(--background-color);
+                color: var(--text-color);
+                max-width: 1000px;
+                margin: 0 auto;
+                border: solid 1px var(--primary-color);
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: var(--secondary-color);
+                color: var(--primary-color);
+                padding: 10px 20px;
+            }
+
+            header h1 {
+                margin: 0;
+                font-family: var(--font-family);
+            }
+
+            .bike-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .bike {
+                background-color: var(--primary-color);
+                border: 2px solid var(--secondary-color);
+                border-radius: 10px;
+                overflow: hidden;
+                text-align: center;
+                padding: 10px;
+                position: relative;
+            }
+
+            .bike img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+
+            .bike h3 {
+                margin: 10px 0;
+                font-size: 1.5rem;
+                color: var(--secondary-color);
+            }
+
+            .bike p {
+                font-size: 1rem;
+                color: var(--text-color);
+            }
+
+            .price {
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+
+            .buy-btn {
+                background-color: var(--secondary-color);
+                color: var(--primary-color);
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                font-size: 1rem;
+                text-transform: uppercase;
+            }
+
+            .buy-btn:hover {
+                background-color: #fff000;
+            }
+
+            footer {
+                background-color: var(--secondary-color);
+                color: var(--primary-color);
+                text-align: center;
+                padding: 10px 0;
+                margin-top: 20px;
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+                .bike-container {
+                    grid-template-columns: 1fr;
+                }
+
+                .buy-btn {
+                    width: 100%;
+                }
+            }
+        </style>
+
+    <body>
+        <header>
+            <h1>Roof Pedal Bike</h1>
+            <div class="hamburger" id="hamburger">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="final-project.html">Home</a></li>
+                    <li><a href="bikes.html">Bikes</a></li>
+                    <li><a href="maintenance.html">Maintenance</a></li>
+                    <li><a href="trails.html">Trails</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="bike-container">
+            <div class="bike">
+                <img src="https://images.unsplash.com/photo-1534150034764-046bf225d3fa?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Bike 1">
+                <h3>Mountain Bike Pro</h3>
+                <p>High-quality mountain bike for tough trails.</p>
+                <p class="price">$800</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="bike">
+                <img src="https://plus.unsplash.com/premium_photo-1684820879021-c51e33511861?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Bike 2">
+                <h3>Road Bike Pro</h3>
+                <p>Lightweight road bike for speed enthusiasts.</p>
+                <p class="price">$1200</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="bike">
+                <img src="https://plus.unsplash.com/premium_photo-1715779332226-13fdfe35b907?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Bike 3">
+                <h3>Hybrid City Bike</h3>
+                <p>Perfect hybrid for city and light off-road trails.</p>
+                <p class="price">$950</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="bike">
+                <img src="https://images.unsplash.com/photo-1699840299728-7c392797d766?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Bike 4">
+                <h3>Electric Commuter Bike</h3>
+                <p>Eco-friendly electric bike for daily commutes.</p>
+                <p class="price">$1500</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy;<span id="currentYear"></span>💲 Carlos Serra 💲 Brazil | <span id="lastModified"></span></p>
+        </footer>
+        <script src="scripts/final-project.js" defer></script>
+
+    </body>
+
+    </html>

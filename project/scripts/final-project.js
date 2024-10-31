@@ -42,9 +42,3 @@ async function getWeather() {
 getWeather();
 
 
- //=============================================================================== TRAILS
-
-    function scheduleRide(trailName) {
-    alert('You have scheduled a ride for ' + trailName + '.');
-}
-
